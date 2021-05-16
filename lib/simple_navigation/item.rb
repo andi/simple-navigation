@@ -58,6 +58,16 @@ module SimpleNavigation
 
       html_opts
     end
+    
+    # Return string from options for insert before link.
+    def content_before
+      options.fetch(:content_before, '')
+    end
+  
+    # Return string from options for insert after link.
+    def content_after
+      options.fetch(:content_after, '')
+    end    
 
     # Returns the configured active_leaf_class if the item is the selected leaf,
     # nil otherwise
